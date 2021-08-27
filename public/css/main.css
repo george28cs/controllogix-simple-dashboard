@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+  margin: 0
+}
+
+body { padding-top:50px; 
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+main {
+  margin-top: 30px;
+  flex-grow: 1;
+}
+.program-name{
+  margin-top: 10px;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+.footer {
+  flex-shrink: 0;
+}

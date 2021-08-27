@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Tag Name</th>
+              <th scope="col">Data Type</th>
+              <th scope="col">Scope</th>
+              <th scope="col">Last Value</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% tags.forEach( tag => { %>
+                <tr>
+                <th><%= tag.name %></th>
+                <td><%= tag.type %></td>
+                <td><%= tag.scope %></td>
+                <td>
+                    <%= tag.value === null ? 'No value' : tag.value %>
+                </td>
+                <td>
+                  <%= tag.value === null ? 'No value' : tag.date.toLocaleString() %>
+              </td>
+                </tr>
+            <% }) %>
+          </tbody>
+        </table>
+        
+      </div>
+</main>
+
+<footer class="container-fluid text-center">
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
